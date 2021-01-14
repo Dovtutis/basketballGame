@@ -12,7 +12,7 @@ public function __construct()
     $this->teams[] =
         [
           'team1' => new Team(),
-          'team2' => new Team
+          'team2' => new Team()
         ];
 
     $randomMonth = rand(1,12);
