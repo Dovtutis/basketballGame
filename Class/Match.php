@@ -16,9 +16,16 @@ public function __construct()
         ];
 
     $randomMonth = rand(1,12);
-    $randomDay = rand(1,31);
-    $this->date = "2020-$randomMonth-$randomDay";
+    if (strlen((string)$randomMonth)===1){
+        $randomMonth = '0' . $randomMonth;
+    }
 
+    $randomDay = rand(1,31);
+    if (strlen((string)$randomDay)===1){
+        $randomDay = '0' . $randomDay;
+    }
+
+    $this->date = "2020-$randomMonth-$randomDay";
     $randomHour = rand(15,23);
     $this->time = "$randomHour:00";
 
